@@ -2,7 +2,7 @@
 const personalImageAlt = "Derian Nazareno"
 import Badge from "@/components/Badge.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
+import CvIcon from "@/components/icons/CV.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
 ---
@@ -10,7 +10,7 @@ import GitHub from "./icons/GitHub.astro"
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
-      class="rounded-full shadow-lg size-24"
+      class="rounded-full shadow-lg size-28"
       src="/deriandev17.webp"
       alt={personalImageAlt}
     />
@@ -32,13 +32,13 @@ import GitHub from "./icons/GitHub.astro"
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
     +1 años de experiencia. <strong
-      >Ingeniero de Software</strong
+      >Ingeniero en Sistemas de la informacion</strong
     > de Quito, Ecuador . Especializado en el desarrollo de aplicaciones web.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:derian.nazareno@hotmail.com">
-      <MailIcon class="size-4" />
-      Contáctame
+      <CvIcon class="size-4" />
+      Cv
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/derian-fabricio-nazareno-mendez-9a2968228">
       <LinkedInIcon class="size-4" />
