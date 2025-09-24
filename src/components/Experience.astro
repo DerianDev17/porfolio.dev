@@ -7,7 +7,6 @@ const EXPERIENCIE = [
     company: "Eus3 Preuniversitario",
     description:
       "Desarrollé, mantuve y optimicé sistemas informáticos, asegurando su rendimiento y estabilidad. Instalé y configuré computadoras y sistemas operativos, garantizando un entorno de trabajo eficiente. Resolví problemas de red y aseguré la conectividad, proporcionando una infraestructura tecnológica confiable.",
-    //link: "https://twitch.tv/midudev",
   },
   {
     date: "junio. 2021 - Jul. 2022",
@@ -19,11 +18,18 @@ const EXPERIENCIE = [
 ]
 ---
 
-<ol class="relative mt-16">
+<ol
+  class="relative mt-16 space-y-10 pl-6 before:absolute before:left-3 before:top-0 before:h-full before:w-px before:bg-gradient-to-b before:from-emerald-400/60 before:via-emerald-400/20 before:to-transparent"
+>
   {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="">
-        <ExperienceItem {...experiencie} />
+    EXPERIENCIE.map((experience) => (
+      <li class="relative pl-8">
+        <span
+          class="absolute left-0 top-6 inline-flex size-4 items-center justify-center rounded-full border border-emerald-400/50 bg-white/80 shadow-sm shadow-emerald-200/40 dark:border-emerald-400/40 dark:bg-slate-900"
+        >
+          <span class="inline-flex size-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]"></span>
+        </span>
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
