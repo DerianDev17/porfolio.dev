@@ -1,73 +1,40 @@
 ---
- const personalImageAlt = "Derian Nazareno"
+const personalImageAlt = "Derian Nazareno"
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
-  >
-    <p>
-      Me llamo Derian y soy un apasionado de la programación y la informática. Empecé en este fascinante mundo desde joven y actualmente estoy <strong>enfocado en el desarrollo web e inteligencia artificial</strong>.
-    </p>
+<article
+  class="relative overflow-hidden rounded-[2.5rem] border border-slate-900/10 bg-white/80 p-8 shadow-xl shadow-indigo-200/40 backdrop-blur-xl transition dark:border-white/10 dark:bg-slate-900/70 dark:shadow-black/40 sm:p-12"
+>
+  <div class="absolute -right-10 top-10 h-56 w-56 rounded-full bg-emerald-400/25 blur-[140px] dark:bg-emerald-400/20"></div>
+  <div class="absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-cyan-400/25 blur-[160px] dark:bg-cyan-500/20"></div>
+  <div class="relative grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_260px]">
+    <div class="order-2 space-y-5 text-base leading-relaxed text-slate-600 md:order-1 dark:text-slate-200">
+      <p>
+        Me llamo Derian y soy un apasionado de la programación y la informática. Empecé en este fascinante mundo desde joven y
+        actualmente estoy <strong class="text-emerald-600 dark:text-emerald-300">enfocado en el desarrollo web e inteligencia artificial</strong>.
+      </p>
 
-    <p>
-      Durante mi pasantía en un preuniversitario, desarrollé una <strong
-        >plataforma web utilizando Laravel</strong
-      >. Este proyecto no solo demostró mis habilidades técnicas en la creación de aplicaciones web robustas y escalables, sino que también me permitió obtener un puesto de trabajo en la institución.
-    </p>
+      <p>
+        Durante mi pasantía en un preuniversitario, desarrollé una <strong class="text-emerald-600 dark:text-emerald-300">plataforma web utilizando Laravel</strong>.
+        Este proyecto demostró mis habilidades técnicas en la creación de aplicaciones robustas y escalables y se transformó en
+        una herramienta clave para la institución.
+      </p>
 
-    <p>
-      Como programador, <strong
-        >mi objetivo es seguir creciendo en el campo de la tecnología,  </strong
-      >. Me encanta estar al día con las últimas tendencias tecnológicas y siempre busco nuevas oportunidades para aprender y crecer profesionalmente.
-      Mi objetivo es contribuir a proyectos innovadores que tengan un impacto positivo.
-    </p>
+      <p>
+        Como programador, <strong class="text-emerald-600 dark:text-emerald-300">mi objetivo es seguir creciendo en el campo de la tecnología</strong>. Me encanta estar al
+        día con las últimas tendencias y siempre busco oportunidades para aprender, compartir conocimiento y participar en
+        proyectos con impacto real.
+      </p>
+    </div>
+
+    <div class="order-1 md:order-2">
+      <div class="relative mx-auto aspect-[4/5] w-48 overflow-hidden rounded-[2.5rem] border border-slate-900/10 bg-white/90 shadow-lg shadow-indigo-200/40 dark:border-white/15 dark:bg-slate-900/70 dark:shadow-black/40 sm:w-60">
+        <img
+          src="/me.webp"
+          alt={personalImageAlt}
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
   </div>
-
-  <img width="200" height="200" src="/me.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
 </article>
-
-<!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
-
-<p>
-  Mi sueño es encontrar mi primer empleo en el mundo de la programación. Una empresa donde pueda seguir aprendiendo. ❌
-</p>
-
-<p>
-  ❌ Apasionado de la programación desde chekitito. Me encantan los ordenadores y crear páginas web buenas y rápidas con la última tecnología.
-</p>
-
-<p>
-  Trabajo bien en equipo. Siempre estoy aprendiendo cosas nuevas.
-</p>
-
--------------------------------------
-
---------------------------------------
-
-<p>
-  ¡Soy Leo! Estudié Derecho Empresarial y, tras años ejerciendo, me pasé al mundo de la Programación. Desde entonces disfruto creando experiencias web para los usuarios.
-</p>
-
-<p>
-  Entre mis éxitos destaco que durante el Grado Superior, ayudé a mis compañeros a aprender sobre TDD. Me encanta el testing, creo en su importancia, y me gusta compartir mi conocimiento sobre ello.
-</p>
-
-<p>
-  Cuento con experiencia desarrollando aplicaciones móviles, y he creado una iniciativa llamada X para mezclar mis dos pasiones: la programación y el derecho. Ayudando a la sociedad a acceso a una defensa justa.
-</p>
-
----------------------------------------
-
-<p>Me llamo Sara, tengo 25 años y soy de Santiago, Chile 🇨🇱. Terminé mis estudios como Desarrolladora Web. Me encanta enfocarme en la parte del rendimiento, para ofrecer la mejora experiencia al usuario.</p>
-
-<p>
-  Colaboro en la organización del MeetUp local BeerJS donde reunimos a desarrolladores de Santiago para compartir conocimiento y experiencias. El año 2023 hicimos un total de 25 charlas con más de 2000 asistentes.
-</p>
-
-<p>
-  Además de participar activamente en la comunidad, he participado en la Hackathon de Midudev quedando en 3er puesto con mi proyecto _Chatty_, donde usando IA podías interactuar con un PDF. ¡Échale un vistazo!
-</p>
-
--->

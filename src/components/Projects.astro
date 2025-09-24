@@ -13,37 +13,37 @@ import PHP from "./icons/php.astro"
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "border border-slate-900/20 bg-slate-900/5 text-slate-700 dark:border-white/20 dark:bg-white/10 dark:text-slate-100",
     icon: NextJS,
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "border border-cyan-500/30 bg-cyan-400/10 text-cyan-700 dark:text-cyan-200",
     icon: Tailwind,
   },
   JAVA: {
     name: "Java",
-    class: "bg-[#FFBF78] text-white",
+    class: "border border-orange-500/30 bg-orange-500/10 text-orange-700 dark:text-orange-200",
     icon: Java,
   },
   SPRING: {
     name: "SpringBoot",
-    class: "bg-[#7F9F80] text-white",
+    class: "border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-200",
     icon: SPRING,
   },
   BOOTSTRAP: {
     name: "Bootstrap",
-    class: "bg-[#E178C5] text-white",
+    class: "border border-fuchsia-500/30 bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-200",
     icon: BOOTSTRAP,
   },
   LARAVEL: {
     name: "Laravel",
-    class: "bg-black text-white",
+    class: "border border-rose-500/30 bg-rose-500/10 text-rose-700 dark:text-rose-200",
     icon: LARAVEL,
   },
-   PHP: {
-    name: "php",
-    class: "bg-black text-white",
+  PHP: {
+    name: "PHP",
+    class: "border border-indigo-500/30 bg-indigo-500/10 text-indigo-700 dark:text-indigo-200",
     icon: PHP,
   },
 }
@@ -69,56 +69,53 @@ const PROJECTS = [
 ]
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="grid gap-12 lg:grid-cols-2">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article
+        class="group relative flex h-full flex-col overflow-hidden rounded-[2.25rem] border border-slate-900/10 bg-white/80 p-6 shadow-xl shadow-indigo-200/40 transition hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-emerald-200/30 dark:border-white/10 dark:bg-slate-900/70 dark:shadow-black/40"
+      >
+        <div class="relative overflow-hidden rounded-3xl border border-slate-900/10 bg-slate-900/5 dark:border-white/10">
+          <img
+            alt={title}
+            class="h-56 w-full object-cover transition duration-500 ease-out group-hover:scale-105"
+            loading="lazy"
+            src={image}
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60 dark:from-slate-950/50"></div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+        <div class="relative mt-8 flex flex-1 flex-col gap-4">
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{title}</h3>
+          <p class="text-base leading-relaxed text-slate-600 dark:text-slate-200">{description}</p>
+          <ul class="flex flex-wrap gap-2 pt-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em]">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`inline-flex items-center gap-2 rounded-full px-3 py-1 ${tag.class}`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <footer class="mt-auto flex flex-wrap items-center gap-3 pt-2">
+            {github && (
+              <LinkButton href={github}>
+                <GitHub class="size-5" />
+                Código
+              </LinkButton>
+            )}
+            {link && (
+              <LinkButton href={link}>
+                <Link class="size-4" />
+                Demo
+              </LinkButton>
+            )}
+          </footer>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
